@@ -9,21 +9,29 @@ import UIKit
 
 class SegmentVC: UIViewController {
 
+    @IBOutlet weak var segmentController: UISegmentedControl!
+    @IBOutlet weak var customView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        customView.backgroundColor = .blue
+        segmentController.backgroundColor = .blue
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func segmentTapped(_ sender: Any) {
+        switch segmentController.selectedSegmentIndex {
+            case 0:
+                customView.backgroundColor = .blue
+                segmentController.backgroundColor = .blue
+            case 1:
+                customView.backgroundColor = .red
+                segmentController.backgroundColor = .red
+            case 2:
+                customView.backgroundColor = .cyan
+                segmentController.backgroundColor = .cyan
+            default:
+                break
+        }
     }
-    */
+    
 
 }

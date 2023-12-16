@@ -1,0 +1,6 @@
+framework module Pods_TestUIElement {
+  umbrella header "Pods-TestUIElement-umbrella.h"
+
+  export *
+  module * { export * }
+}
